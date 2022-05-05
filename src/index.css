@@ -1,0 +1,286 @@
+:root{
+    --purple-1: #aa25be;
+    --purple-2: #9921ab;
+    --purple-3: #d592df;
+    --white: #fff;
+    --darkshadow: 2px 5px 3px 0px rgba(0,0,0,0.5);
+    --lightshadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+    --mainbackground: #F1F5F8;
+    --darkgrey: #353235;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--mainbackground);
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* ---------------------------- */
+
+.section{
+    padding: 5rem 0;
+}
+.section-title{
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+.btn{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: var(--purple-1);
+    border: 2px solid var(--purple-1);
+    padding: 0.45rem 0.8rem;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border-radius: 2px;
+}
+.btn:hover{
+    background-color: var(--purple-1);
+    color: var(--white);
+}
+.btn-primary{
+    background-color: var(--purple-1);
+    color: var(--white);
+    border-color: transparent;
+}
+.btn-primary:hover{
+    background-color: var(--purple-2);
+    color: var(--white);
+}
+
+/* Navbar */
+
+.navbar{
+    height: 8vh;
+    background-color: var(--white);
+    border-bottom: 2px solid var(--purple-1);
+    box-shadow: var(--darkshadow);
+}
+.navbar-center{
+    width: 90vw;
+    height: inherit;
+    margin: 0px auto 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand{
+    height: inherit;
+}
+.logo{
+    height: 100%;
+}
+.navbar-links{
+    display: flex;
+}
+.navbar-links a{
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    padding: 0.25rem 0.5rem;
+}
+.navbar-links a:hover{
+    color: var(--purple-1);
+}
+
+/* SearchForm */
+
+.search-form{
+    width: 80vw;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem 2.5rem;
+    text-transform: capitalize;
+    border-radius: 3px;
+    box-shadow: var(--lightshadow);
+}
+
+.form-control label{
+    display: block;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    color: var(--purple-1);
+}
+
+.form-control input{
+    width: 100%;
+    border:none;
+    background-color: var(--mainbackground);
+    border-radius: 2px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.form-control input:focus{
+    outline-color: var(--purple-1);
+}
+
+/* CocktailList */
+
+.cocktails-center {
+    width: 85vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    max-width: 80vw;
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+  @media screen and (min-width: 400px) {
+    .cocktails-center {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .cocktails-center {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .cocktails-center {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+/* Cocktail */
+
+.cocktail{
+    background-color: var(--white);
+    margin-bottom: 2rem;
+    box-shadow: var(--lightshadow);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: 5px;
+}
+.cocktail:hover{
+    box-shadow: var(--darkshadow);
+}
+.cocktail img{
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.cocktail-footer{
+    padding: 1.5rem;
+}
+.cocktail-footer h3,h4{
+    margin-bottom: 0.3rem;
+}
+.cocktail-footer p{
+    color: var(--darkgrey);
+    margin-bottom: 0.5rem;
+}
+
+/* Loading */
+
+.loader
+{
+    width: 60vw;
+    margin: 0 auto;
+    height: 10rem;
+    background-image: url(./logo1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: load 2s infinite ease-in-out;
+}
+@keyframes load{
+    0%{
+        transform: scale(0.5);
+    }
+    40%{
+        transform: scale(0.75);
+    }
+    60%{
+        transform: scale(0.6);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* About */
+
+.about-section{
+    width: 85vw;
+    margin: 0 auto;
+}
+.about-section p{
+    margin-bottom: 2rem;
+}
+
+/* Error */
+
+.error-page{
+    display: flex;
+    justify-content: center;
+}
+.error-container{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* SingleCocktail */
+
+.cocktail-section {
+    text-align: center;
+  }
+  .drink {
+    width: 80vw;
+    margin: 4rem auto 0;
+    text-align: left;
+  }
+  .drink img {
+    border-radius: 3px;
+    width: 100%;
+  }
+  .drink p {
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.8;
+  }
+  .drink-data {
+    margin-right: 0.5rem;
+    background: var(--purple-3);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;;
+  }
+  .drink-info {
+    padding-top: 2rem;
+  }
+@media screen and (min-width: 700px) {
+    .drink{
+        width: 60vw;;
+    }
+}
+@media screen and (min-width: 992px) {
+    .drink {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .drink-info {
+      padding-top: 0;
+    }
+  }
