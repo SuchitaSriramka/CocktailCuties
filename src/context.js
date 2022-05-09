@@ -40,6 +40,7 @@ const AppProvider = ({ children }) => {
 
     useEffect(() => {
         fetchDrinks()
+        console.log("useeffect called")
     }, [searchTerm, fetchDrinks])
 
     return (
